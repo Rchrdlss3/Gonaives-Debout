@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Gonaives-Debout/static/css/main.763c0d4a.css",
+    "main.js": "/Gonaives-Debout/static/js/main.2af24b3f.js",
+    "index.html": "/Gonaives-Debout/index.html",
+    "main.763c0d4a.css.map": "/Gonaives-Debout/static/css/main.763c0d4a.css.map",
+    "main.2af24b3f.js.map": "/Gonaives-Debout/static/js/main.2af24b3f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.763c0d4a.css",
+    "static/js/main.2af24b3f.js"
+  ]
+}
