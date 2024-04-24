@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Gonaives-Debout/static/css/main.763c0d4a.css",
-    "main.js": "/Gonaives-Debout/static/js/main.dd4a9a37.js",
+    "main.css": "/Gonaives-Debout/static/css/main.39e5ea37.css",
+    "main.js": "/Gonaives-Debout/static/js/main.e326c7df.js",
     "index.html": "/Gonaives-Debout/index.html",
-    "main.763c0d4a.css.map": "/Gonaives-Debout/static/css/main.763c0d4a.css.map",
-    "main.dd4a9a37.js.map": "/Gonaives-Debout/static/js/main.dd4a9a37.js.map"
+    "main.39e5ea37.css.map": "/Gonaives-Debout/static/css/main.39e5ea37.css.map",
+    "main.e326c7df.js.map": "/Gonaives-Debout/static/js/main.e326c7df.js.map"
   },
   "entrypoints": [
-    "static/css/main.763c0d4a.css",
-    "static/js/main.dd4a9a37.js"
+    "static/css/main.39e5ea37.css",
+    "static/js/main.e326c7df.js"
   ]
 }
