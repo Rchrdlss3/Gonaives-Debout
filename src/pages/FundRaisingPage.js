@@ -1,12 +1,13 @@
 import React from 'react'
-import NavigationComponent from '../components/NavigationComponent';
+import NavigationComponent from '../components/CommonComponents/NavigationComponent';
 
-function FundRaisingPage() {
+export default function FundRaisingPage({theme,setTheme}) {
   return (
     <div>
-      <NavigationComponent />
+      <NavigationComponent theme = {theme} setTheme = {setTheme}/>
+      <h1 style = {{
+        fontSize: '5em'
+      }}>Page for Fund Raising</h1>
     </div>
   )
 }
-
-export default FundRaisingPage

@@ -1,12 +1,14 @@
 import React from 'react'
-import NavigationComponent from '../components/NavigationComponent';
+import NavigationComponent from '../components/CommonComponents/NavigationComponent';
+import { mainStyle } from '../helper/styles';
 
-function MarketingPage() {
+export default function MarketingPage({theme,setTheme}) {
   return (
     <div>
-      <NavigationComponent />
+      <NavigationComponent theme = {theme} setTheme = {setTheme}/>
+      <h1 style = {{
+        fontSize: '5em'
+      }}>Page for Marketing</h1>
     </div>
   )
 }
-
-export default MarketingPage

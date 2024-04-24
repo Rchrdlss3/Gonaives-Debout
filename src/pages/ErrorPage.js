@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import NavigationComponent from '../components/CommonComponents/NavigationComponent';
 
-function ErrorPage() {
+export default function ErrorPage({theme,setTheme}) {
   return (
-    <div>ErrorPage</div>
+    <div>
+            <NavigationComponent theme = {theme} setTheme = {setTheme}/>
+    </div>
   )
 }
-
-export default ErrorPage

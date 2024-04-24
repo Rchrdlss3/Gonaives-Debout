@@ -6,15 +6,39 @@ import MarketingPage from '../pages/MarketingPage';
 import ProjectsPage from '../pages/ProjectsPage'
 import FundRaisingPage from '../pages/FundRaisingPage';
 import ErrorPage from '../pages/ErrorPage';
+import {darkTheme, lightTheme} from './styles';
 
-export const haitianFlagColors = {
-    'red' : '#d21034',
-    'blue' : '#00209f',
-    'white': '#ffffff',
-    'yellow': '#f1b517',
-    'green': '#016a16'
-}   
+export const TITLE = 'Gonayiv Debou';
 
+export const HAITIAN_MOTTO = `L'UNION FAIT LA FORCE`;
+
+export const SLOGAN = 'Sécurité Solidarité Hospitablé'
+export const THEME_CONSTANTS = {
+    lightTheme : "LIGHT_THEME",
+    darkTheme: "DARK_THEME"
+}
+export const getCurrentTheme = () => {
+    let theme = localStorage.getItem("THEME")
+    switch(theme) {
+        case THEME_CONSTANTS.lightTheme : 
+        return lightTheme;
+        case THEME_CONSTANTS.darkTheme :
+        return darkTheme;
+        case null:
+        localStorage.setItem("THEME",THEME_CONSTANTS.lightTheme)
+        return lightTheme;
+    }
+}
+
+export const setCurrentTheme = (checked) => {
+    if (checked == true) {
+        localStorage.setItem("THEME",THEME_CONSTANTS.darkTheme)
+        return darkTheme
+    } else {
+        localStorage.setItem("THEME",THEME_CONSTANTS.lightTheme)
+        return lightTheme
+    }
+}
 export const routeMap = new Map([
         ["home",{
             path: "/",
@@ -56,4 +80,4 @@ export const routeMap = new Map([
             name: "Error",
             element: <ErrorPage />
         }]
-    ]);
+]);

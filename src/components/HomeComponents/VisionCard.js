@@ -1,17 +1,19 @@
-import React from 'react'
+import { buttonStyle, visionCardStyle } from "../../helper/styles";
 
-function VisionCard({title}) {
+export default function VisionCard({title,theme}) {
   return (
     <div>
-        <div style = {{
-            width: '300px',
-            height: '200px',
-            border: `1px solid black`
-        }}>
-             <h2>{title}</h2>
+        <div style = {visionCardStyle(theme)}>
+             <h3>{title}</h3>
+             <p style = {{
+               padding: '5px'
+             }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+               Ut enim ad minim veniam.
+              </p>
+             <button
+             style = {buttonStyle(theme)}
+             >Read More</button>
         </div>
     </div>
-  )
+  );
 }
-
-export default VisionCard

@@ -1,12 +1,13 @@
 import React from 'react';
-import NavigationComponent from '../components/NavigationComponent';
+import NavigationComponent from '../components/CommonComponents/NavigationComponent';
 
-function AccomplishmentsPage() {
+export default function AccomplishmentsPage({theme,setTheme}) {
   return (
     <div>
-      <NavigationComponent />
+      <NavigationComponent theme = {theme} setTheme = {setTheme}/>
+      <h1 style = {{
+        fontSize: '5em'
+      }}>Page for Accomplishments</h1>
     </div>
   )
 }
-
-export default AccomplishmentsPage
