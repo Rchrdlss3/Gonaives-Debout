@@ -1,9 +1,9 @@
 import { buttonStyle, visionCardStyle } from "../../helper/styles";
 
-export default function VisionCard({title,theme}) {
+export default function VisionCard({title,theme,isMobile}) {
   return (
     <div>
-        <div style = {visionCardStyle(theme)}>
+        <div style = {visionCardStyle(theme,isMobile)}>
              <h3>{title}</h3>
              <p style = {{
                padding: '5px'

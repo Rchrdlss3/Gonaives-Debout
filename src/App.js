@@ -24,9 +24,9 @@ export default function App() {
       mainStyle(theme,isMobile)
     }>
       <HashRouter>
-      <NavigationComponent theme = {theme} setTheme = {setTheme}/>
+      <NavigationComponent theme = {theme} setTheme = {setTheme} isMobile = {isMobile}/>
       <Routes>
-        <Route element = {<HomePage theme = {theme} />} path = "/"></Route>
+        <Route element = {<HomePage theme = {theme} isMobile = {isMobile} />} path = "/"></Route>
         <Route element = {<MarketingPage theme = {theme} />} path = "/marketing"></Route>
         <Route element= {<HistoryPage theme = {theme} />} path = "/history"></Route>
         <Route element = {<AccomplishmentsPage theme = {theme} />} path = "/accomplishments"></Route>

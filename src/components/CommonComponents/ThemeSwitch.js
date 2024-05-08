@@ -2,7 +2,7 @@ import { useEffect,useState } from 'react';
 import { getCurrentTheme, setCurrentTheme } from "../../helper/commonhelper"
 import { darkTheme } from '../../helper/styles';
 
-export default function ThemeSwitch ({theme,setTheme}){
+export default function ThemeSwitch ({theme,setTheme,isMobile}){
 const [isChecked,setIsChecked] = useState((getCurrentTheme() == darkTheme));
 
 useEffect(() => {
@@ -13,14 +13,16 @@ useEffect(() => {
 
 return (
 <div style = {{
-    display: 'inline-flex'
+    display: 'inline-flex',
+    padding: isMobile? '15px': null,
+    paddingTop: isMobile ? '50px' : null
 }}>
     <label className ='switch'
     style = {{
         position: 'relative',
         display: 'inline-block',
-        width: '44px',
-        height: '14px'       
+        width: isMobile ? '88px' : '44px',
+        height: isMobile ? '28px' : '14px'       
     }} >
         <input 
         type = 'checkbox' 
@@ -42,7 +44,7 @@ return (
         left: 0,
         right: 0,
         bottom: 0,
-        borderRadius:' 15px',
+        borderRadius: '15px',
         WebKitTransition: '.4s',
         transition: '.4s',
         border: `1px solid ${theme.primary}`,
@@ -51,8 +53,8 @@ return (
     >
     </span>
     <span style = {{
-        width: '13px',
-        height: '14px',
+        width: isMobile ? '26px' : '13px',
+        height: isMobile ? '28px' : '14px',
         position: 'absolute',
         borderRadius: '50%',
         transition: '.4s',

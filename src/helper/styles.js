@@ -92,12 +92,14 @@ export const defaultStyle = (themeObj) => {
 
 }
 
-export const linkStyle = (themeObj,isActive,isPending,isTransitioning) => {
+export const linkStyle = (themeObj,isActive,isPending,isTransitioning,isMobile) => {
     return {
         margin: '5px',
         textDecoration: 'none',
         fontWeight: '420',
-        color: isActive ? `${themeObj.links.active}`:'inherit'
+        fontSize: isMobile ? '5em':null,
+        color: isActive ? `${themeObj.links.active}`:'inherit',
+        justifyContent: 'center',
     }   
 }
 
@@ -107,42 +109,49 @@ export const mainStyle = (themeObj,isMobile) => {
         height : '100%',
         backgroundColor : themeObj.primary,
         color : themeObj.fonts.defaultColor,
-        transition: '.4s'
+        transition: '.4s',
+        display: isMobile ? 'flex' : null,
+        flexDirection: isMobile ? 'column' : null,
+        alignItems: isMobile ? 'center' : null,
+        justifyContent: isMobile ? 'center' : null
     }
 }
 
-export const navigationStyle = (themeObj) => {
+export const navigationStyle = (themeObj,isMobile) => {
     return {
-            height: '50px',
-            // backgroundColor: themeObj.transparent,
+            height:'50px',
             width: '100%',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: isMobile ? null : 'center',
+            fontSize: isMobile ? '1.5em' : null
     }
 }
 export const titleStyle = (themeObj,fontSize) => {
     return {
         margin: '0',
         padding: '0',
-        fontSize: fontSize ? fontSize : null
+        fontSize: fontSize
     }
 }
-export const underTitleStyle = (themeObj) => {
+export const underTitleStyle = (themeObj,fontSize) => {
     return {
         fontFamily: 'Dancing Script',
         marginTop: '0',
-        padding: '0'
+        padding: '0',
+        fontSize: fontSize
     }
 }
 
-export const visionCardStyle = (themeObj) => {
+export const visionCardStyle = (themeObj,isMobile) => {
     return {
-            width: '350px',
-            height: '200px',
+            width: isMobile ? '90%' : '350px',
+            height: isMobile ? '500px' : '200px',
             border: `1px solid ${themeObj.secondary}`,
+            fontSize: isMobile ? '2.5em' : null,
             borderRadius: `5px`,
             boxShadow: `5px 5px 5px ${themeObj.transparent}`,
             color: themeObj.fonts.defaultColor,
+            margin: isMobile ? 'auto' : null,
     }
 }
