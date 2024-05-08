@@ -5,7 +5,6 @@ import HistoryComponent from '../components/HistoryComponents.js/HistoryComponen
 function HistoryPage({theme,setTheme}) {
   return (
     <div>
-      <NavigationComponent theme = {theme} setTheme = {setTheme}/>
       <h1 style = {{
         fontFamily: 'Dancing Script',
         marginBottom: 0,

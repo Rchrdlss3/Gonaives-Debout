@@ -12,6 +12,7 @@ import HistoryPage from './pages/HistoryPage';
 import { lightTheme, mainStyle, Theme } from './helper/styles';
 import { getCurrentTheme } from './helper/commonhelper';
 import { UAParser } from 'ua-parser-js';
+import NavigationComponent from './components/CommonComponents/NavigationComponent';
 
 export default function App() {
   let parser = new UAParser(window.navigator.userAgent)
@@ -23,18 +24,16 @@ export default function App() {
       mainStyle(theme,isMobile)
     }>
       <HashRouter>
+      <NavigationComponent theme = {theme} setTheme = {setTheme}/>
       <Routes>
-        <Route element = {<HomePage theme = {theme} setTheme = {setTheme}/>} path = "/"></Route>
-        <Route element = {<MarketingPage theme = {theme} setTheme = {setTheme}/>} path = "/marketing"></Route>
-        <Route element= {<HistoryPage theme = {theme} setTheme = {setTheme}/>} path = "/history"></Route>
-        <Route element = {<AccomplishmentsPage theme = {theme} setTheme = {setTheme}/>} path = "/accomplishments"></Route>
-        <Route element = {<AwardsPage theme = {theme} setTheme = {setTheme}/>} path = "/awards"></Route>
-        <Route element = {<ProjectsPage theme = {theme} setTheme = {setTheme}/>} path = "/projects"></Route>
-        <Route element = {<FundRaisingPage theme = {theme} setTheme = {setTheme}/>} path = "/fund-raising"></Route>
-        <Route element = {<ErrorPage theme = {theme} setTheme = {setTheme}/>} path = "/*"></Route>
-        {/* {[...routeMap.values()].map(route => 
-         <Route path = {route.path} element  = {route.element}>{route.name}</Route>
-        )} */}
+        <Route element = {<HomePage theme = {theme} />} path = "/"></Route>
+        <Route element = {<MarketingPage theme = {theme} />} path = "/marketing"></Route>
+        <Route element= {<HistoryPage theme = {theme} />} path = "/history"></Route>
+        <Route element = {<AccomplishmentsPage theme = {theme} />} path = "/accomplishments"></Route>
+        <Route element = {<AwardsPage theme = {theme} />} path = "/awards"></Route>
+        <Route element = {<ProjectsPage theme = {theme} />} path = "/projects"></Route>
+        <Route element = {<FundRaisingPage theme = {theme} />} path = "/fund-raising"></Route>
+        <Route element = {<ErrorPage theme = {theme} />} path = "/*"></Route>
       </Routes>
       </HashRouter>
     </div>

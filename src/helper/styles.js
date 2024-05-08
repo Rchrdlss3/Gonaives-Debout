@@ -18,7 +18,8 @@ class Links {
         this.defaultColor = defaultColor;
     }
 }
-export class Theme {
+
+class Theme {
     constructor(primary,secondary,tertiary,fonts,links,transparent) {
         this.primary = primary;
         this.secondary = secondary;
@@ -33,7 +34,31 @@ export class Theme {
         }
     }
 }
+// class Theme {
+//     constructor(primary,secondary,font,secondFont,shadow) {
+//         this.primary = primary
+//         this.secondary = secondary
+//         this.font = font
+//         this.secondFont = secondFont
+//         this.shadow = shadow
+//     }
+// }
 
+// export const lightTheme = new Theme(
+//     "#ffffff",
+//     "f7f8f9",
+//     "1f3255",
+//     "435370",
+//     "rgba(0,0,0,0.3)"
+// )
+
+// export const darkTheme = new Theme(
+//     "15191d",
+//     "1d2125",
+//     "c7d1dc",
+//     "8494a7",
+//     "rgba(255,255,255,0.3)"
+// )
 export const lightTheme = new Theme (
     "#eeeeee",
     "#979797",
@@ -45,12 +70,12 @@ export const lightTheme = new Theme (
 ) 
 
 export const darkTheme = new Theme(
-    "#111111",
-    "#1c1b1e",
-    "#818181",
-    new Fonts("#eeeeee","#fffffff"),
+    "#15191d",
+    "#1d2125",
+    "#c7d1dc",
+    new Fonts("#c7d1dc","#fffffff"),
     new Links("#0088cc","#eeeeee","#eeeeee"),
-    "rgba(238,238,238,0.3)"
+    "rgba(0,0,0,0.3)"
 )
 
 export const buttonStyle = (themeObj) => {
@@ -117,7 +142,7 @@ export const visionCardStyle = (themeObj) => {
             height: '200px',
             border: `1px solid ${themeObj.secondary}`,
             borderRadius: `5px`,
-            boxShadow: `5px 5px 5px ${themeObj.tertiary}`,
+            boxShadow: `5px 5px 5px ${themeObj.transparent}`,
             color: themeObj.fonts.defaultColor,
     }
 }

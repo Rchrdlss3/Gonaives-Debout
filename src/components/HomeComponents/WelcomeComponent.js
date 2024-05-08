@@ -11,7 +11,7 @@ export default function WelcomeComponent({theme}) {
             <h2 style = {underTitleStyle(theme)}>{SLOGAN}</h2>
         <img 
             alt = "Image of civilians in Gonayiv" 
-            src = "https://ayibopost.com/wp-content/uploads/2018/01/memorial2.jpg"
+            src = "https://pbs.twimg.com/media/EZB3gzgWsAI5hsz.jpg"
             style = {{
                 width: '100%',
                 height: '320px',

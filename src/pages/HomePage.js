@@ -4,7 +4,7 @@ import WhoAreWeComponent from '../components/HomeComponents/WhoAreWeComponent';
 import WelcomeComponent from '../components/HomeComponents/WelcomeComponent';
 import VisionCard from '../components/HomeComponents/VisionCard';
 
-export default function HomePage({theme,setTheme}) {
+export default function HomePage({theme}) {
   let cardRows = []
   const cardTitle = ['Our Vision', 'Our Objective', 'How to Help']
   for (let i = 0; i <3; i++) {
@@ -12,7 +12,6 @@ export default function HomePage({theme,setTheme}) {
   }
   return (
     <div>
-      <NavigationComponent theme = {theme} setTheme = {setTheme}/>
       <WelcomeComponent theme = {theme}/>
       <WhoAreWeComponent theme = {theme}/>
       <div style = {
