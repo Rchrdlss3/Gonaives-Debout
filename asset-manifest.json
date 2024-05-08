@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Gonaives-Debout/static/css/main.39e5ea37.css",
-    "main.js": "/Gonaives-Debout/static/js/main.56752a06.js",
+    "main.js": "/Gonaives-Debout/static/js/main.b5ca72e3.js",
     "index.html": "/Gonaives-Debout/index.html",
     "main.39e5ea37.css.map": "/Gonaives-Debout/static/css/main.39e5ea37.css.map",
-    "main.56752a06.js.map": "/Gonaives-Debout/static/js/main.56752a06.js.map"
+    "main.b5ca72e3.js.map": "/Gonaives-Debout/static/js/main.b5ca72e3.js.map"
   },
   "entrypoints": [
     "static/css/main.39e5ea37.css",
-    "static/js/main.56752a06.js"
+    "static/js/main.b5ca72e3.js"
   ]
 }
