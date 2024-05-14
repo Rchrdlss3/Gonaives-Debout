@@ -2,7 +2,7 @@ import React from 'react';
 import { routeMap } from '../../helper/commonhelper';
 import {NavLink} from 'react-router-dom';
 import {HAITIAN_FLAG_COLORS} from '../../helper/commonhelper';
-import { linkStyle, navigationStyle } from '../../helper/styles';
+import { dropDownStyle, linkStyle, navigationStyle } from '../../helper/styles';
 import ThemeSwitch from './ThemeSwitch';
 import { useNavigate } from 'react-router';
 import HamburgerComponent from './HamburgerComponent';
@@ -13,12 +13,21 @@ function NavigationComponent({theme,setTheme,isMobile}) {
       return (
         [...routeMap.values()].map(route => 
           {
-          if (route.name !== 'Error') {
+          if (route.name !== 'Error' && route.dropdown == null) {
               return <NavLink
                to = {route.path}
                className = {({isActive}) => isActive? 'link-active':'link-inactive'}
                style = {({isActive,isPending,isTransitioning}) => linkStyle(theme,isActive,isPending,isTransitioning)}
-               >{route.name}</NavLink>
+               >{route.name}
+               </NavLink>               
+          } else if (route.dropdown != null) {
+            return <select style = {dropDownStyle(theme,isMobile)} onChange = {(e) => navigate(e.target.value)}>
+            {
+            route.dropdown.map(option => {
+              return <option value = {option.path}>{option.name}</option>
+            })
+            }
+            </select>
           }
         }
           )

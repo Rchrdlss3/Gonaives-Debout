@@ -48,12 +48,14 @@ export const routeMap = new Map([
         ["marketing",{
             path: "/marketing",
             name: "Marketing",
-            element: <MarketingPage />
+            element: <MarketingPage />,
+            dropdown: [{path: "/marketing", name: "Marketing"},{path: "/marketing",name: 'option2'}]
         }],
         ["history",{
             path: "/history",
             name: "History",
-            element: <HistoryPage />
+            element: <HistoryPage />,
+            dropdown: [{name: 'Option1'},{name: 'option2'}]
         }],
         ["accomplishments",{
             path: "/accomplishments",

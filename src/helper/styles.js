@@ -97,7 +97,7 @@ export const linkStyle = (themeObj,isActive,isPending,isTransitioning,isMobile) 
         margin: '5px',
         textDecoration: 'none',
         fontWeight: '420',
-        fontSize: isMobile ? '5em':null,
+        fontSize: isMobile ? '5em':'1em',
         color: isActive ? `${themeObj.links.active}`:'inherit',
         justifyContent: 'center',
     }   
@@ -153,5 +153,18 @@ export const visionCardStyle = (themeObj,isMobile) => {
             boxShadow: `5px 5px 5px ${themeObj.transparent}`,
             color: themeObj.fonts.defaultColor,
             margin: isMobile ? 'auto' : null,
+    }
+}
+
+export const dropDownStyle = (themeObj,isMobile) => {
+    return {
+        border: 'none',
+        backgroundColor: 'inherit',
+        color: 'inherit',
+        margin: '5px',
+        textDecoration: 'none',
+        fontWeight: '420',
+        fontSize: isMobile ? '5em':'1em',
+        justifyContent: 'center'
     }
 }

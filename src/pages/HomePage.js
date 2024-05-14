@@ -20,6 +20,7 @@ export default function HomePage({theme,isMobile}) {
           display: 'flex',
           flexDirection : isMobile ? 'column' : 'row',
           gap: '5%',
+          justifyContent: 'center'
       }
         }>
         {cardRows}
