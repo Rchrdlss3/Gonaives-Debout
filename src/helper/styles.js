@@ -34,31 +34,7 @@ class Theme {
         }
     }
 }
-// class Theme {
-//     constructor(primary,secondary,font,secondFont,shadow) {
-//         this.primary = primary
-//         this.secondary = secondary
-//         this.font = font
-//         this.secondFont = secondFont
-//         this.shadow = shadow
-//     }
-// }
 
-// export const lightTheme = new Theme(
-//     "#ffffff",
-//     "f7f8f9",
-//     "1f3255",
-//     "435370",
-//     "rgba(0,0,0,0.3)"
-// )
-
-// export const darkTheme = new Theme(
-//     "15191d",
-//     "1d2125",
-//     "c7d1dc",
-//     "8494a7",
-//     "rgba(255,255,255,0.3)"
-// )
 export const lightTheme = new Theme (
     "#eeeeee",
     "#979797",
@@ -165,6 +141,26 @@ export const dropDownStyle = (themeObj,isMobile) => {
         textDecoration: 'none',
         fontWeight: '420',
         fontSize: isMobile ? '5em':'1em',
+        justifyContent: 'center'
+    }
+}
+
+export const welcomeComponentStyle = (theme,isMobile) => {
+    return {
+        width: isMobile ? '90%' :'100%',
+        height: isMobile ? '400px' : '320px',
+        objectPosition: '15% 80%',
+        objectFit: 'cover',
+        borderRadius: isMobile ? '5px': null
+    }
+}
+
+export const cardRowStyle = (theme,isMobile) => {
+    return {
+        width : '100%',
+        display: 'flex',
+        flexDirection : isMobile ? 'column' : 'row',
+        gap: '5%',
         justifyContent: 'center'
     }
 }

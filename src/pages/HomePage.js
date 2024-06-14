@@ -1,8 +1,8 @@
 import React from 'react'
-import NavigationComponent from '../components/CommonComponents/NavigationComponent';
 import WhoAreWeComponent from '../components/HomeComponents/WhoAreWeComponent';
 import WelcomeComponent from '../components/HomeComponents/WelcomeComponent';
 import VisionCard from '../components/HomeComponents/VisionCard';
+import { cardRowStyle } from '../helper/styles';
 
 export default function HomePage({theme,isMobile}) {
   let cardRows = []
@@ -14,15 +14,7 @@ export default function HomePage({theme,isMobile}) {
     <div>
       <WelcomeComponent theme = {theme} isMobile = {isMobile}/>
       <WhoAreWeComponent theme = {theme}/>
-      <div style = {
-        {
-          width : '100%',
-          display: 'flex',
-          flexDirection : isMobile ? 'column' : 'row',
-          gap: '5%',
-          justifyContent: 'center'
-      }
-        }>
+      <div style = {cardRowStyle(theme,isMobile)}>
         {cardRows}
       </div>  
       </div>

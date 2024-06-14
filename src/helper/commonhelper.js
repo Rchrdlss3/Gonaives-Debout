@@ -12,7 +12,10 @@ export const TITLE = 'Gonayiv Debou';
 
 export const HAITIAN_MOTTO = `L'UNION FAIT LA FORCE`;
 
-export const SLOGAN = 'Sécurité Solidarité Hospitablé'
+export const SLOGAN = 'Sécurité Solidarité Hospitalité'
+
+export const FILLER_TEXT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+
 export const THEME_CONSTANTS = {
     lightTheme : "LIGHT_THEME",
     darkTheme: "DARK_THEME"
@@ -49,13 +52,11 @@ export const routeMap = new Map([
             path: "/marketing",
             name: "Marketing",
             element: <MarketingPage />,
-            dropdown: [{path: "/marketing", name: "Marketing"},{path: "/marketing",name: 'option2'}]
         }],
         ["history",{
             path: "/history",
             name: "History",
             element: <HistoryPage />,
-            dropdown: [{name: 'Option1'},{name: 'option2'}]
         }],
         ["accomplishments",{
             path: "/accomplishments",

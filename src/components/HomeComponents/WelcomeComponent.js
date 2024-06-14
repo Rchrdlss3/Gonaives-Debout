@@ -1,6 +1,6 @@
 import React from 'react'
 import {SLOGAN, TITLE } from '../../helper/commonhelper'
-import { titleStyle, underTitleStyle } from '../../helper/styles'
+import { titleStyle, underTitleStyle, welcomeComponentStyle } from '../../helper/styles'
 
 export default function WelcomeComponent({theme,isMobile}) {
   return (
@@ -12,13 +12,7 @@ export default function WelcomeComponent({theme,isMobile}) {
         <img 
             alt = "Image of Gonayiv" 
             src = "https://pbs.twimg.com/media/EZB3gzgWsAI5hsz.jpg"
-            style = {{
-                width: isMobile ? '90%' :'100%',
-                height: isMobile ? '400px' : '320px',
-                objectPosition: '15% 80%',
-                objectFit: 'cover',
-                borderRadius: isMobile ? '5px': null
-            }}
+            style = {welcomeComponentStyle(theme,isMobile)}
             ></img>
     </div>
   )
