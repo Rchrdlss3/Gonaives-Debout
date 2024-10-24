@@ -3,7 +3,7 @@ import NavigationComponent from '../components/CommonComponents/NavigationCompon
 import ProjectsCard from '../components/ProjectsComponents/ProjectsCard';
 import { FILLER_TEXT } from '../helper/commonhelper';
 
-export default function ProjectsPage({theme,setTheme}) {
+export default function ProjectsPage() {
   const projectCards = [];
   for (let i = 0; i< 10; i++) {
     projectCards.push(<ProjectsCard />)

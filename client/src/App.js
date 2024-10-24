@@ -1,5 +1,5 @@
 import './App.css';
-import { useState,useEffect } from 'react';
+import { useState, createContext } from 'react';
 import {Routes, Route, HashRouter} from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import MarketingPage from './pages/MarketingPage';
@@ -9,14 +9,17 @@ import ProjectsPage from './pages/ProjectsPage';
 import FundRaisingPage from './pages/FundRaisingPage';
 import ErrorPage from './pages/ErrorPage';
 import HistoryPage from './pages/HistoryPage';
-import { lightTheme, mainStyle, Theme } from './helper/styles';
+import { mainStyle } from './helper/styles';
 import { getCurrentTheme } from './helper/commonhelper';
 import { UAParser } from 'ua-parser-js';
 import NavigationComponent from './components/CommonComponents/NavigationComponent';
 
+export const ThemeContext = createContext()
+
 export default function App() {
   let parser = new UAParser(window.navigator.userAgent)
   let device = parser.getDevice()
+  
   const [theme,setTheme] = useState(getCurrentTheme);
   const [isMobile,setIsMobile] = useState(device.type == 'mobile');
   return (
@@ -24,17 +27,19 @@ export default function App() {
       mainStyle(theme,isMobile)
     }>
       <HashRouter>
-      <NavigationComponent theme = {theme} setTheme = {setTheme} isMobile = {isMobile}/>
+        <ThemeContext.Provider value = {[theme,setTheme]}>
+      <NavigationComponent isMobile = {isMobile}/>
       <Routes>
-        <Route element = {<HomePage theme = {theme} isMobile = {isMobile} />} path = "/"></Route>
-        <Route element = {<MarketingPage theme = {theme} />} path = "/marketing"></Route>
-        <Route element= {<HistoryPage theme = {theme} />} path = "/history"></Route>
-        <Route element = {<AccomplishmentsPage theme = {theme} />} path = "/accomplishments"></Route>
-        <Route element = {<AwardsPage theme = {theme} />} path = "/awards"></Route>
-        <Route element = {<ProjectsPage theme = {theme} />} path = "/projects"></Route>
-        <Route element = {<FundRaisingPage theme = {theme} />} path = "/fund-raising"></Route>
-        <Route element = {<ErrorPage theme = {theme} />} path = "/*"></Route>
+        <Route element = {<HomePage isMobile = {isMobile} />} path = "/"></Route>
+        <Route element = {<MarketingPage />} path = "/marketing"></Route>
+        <Route element= {<HistoryPage />} path = "/history"></Route>
+        <Route element = {<AccomplishmentsPage />} path = "/accomplishments"></Route>
+        <Route element = {<AwardsPage />} path = "/awards"></Route>
+        <Route element = {<ProjectsPage />} path = "/projects"></Route>
+        <Route element = {<FundRaisingPage />} path = "/fund-raising"></Route>
+        <Route element = {<ErrorPage />} path = "/*"></Route>
       </Routes>
+      </ThemeContext.Provider>
       </HashRouter>
     </div>
   );

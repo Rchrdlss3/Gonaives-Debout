@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { routeMap } from '../../helper/commonhelper';
 import {NavLink} from 'react-router-dom';
-import {HAITIAN_FLAG_COLORS} from '../../helper/commonhelper';
 import { dropDownStyle, linkStyle, navigationStyle } from '../../helper/styles';
 import ThemeSwitch from './ThemeSwitch';
 import { useNavigate } from 'react-router';
 import HamburgerComponent from './HamburgerComponent';
+import { ThemeContext } from '../../App';
 
-function NavigationComponent({theme,setTheme,isMobile}) {
+function NavigationComponent({isMobile}) {
     const navigate = useNavigate();
+
+    const [theme,setTheme] = useContext(ThemeContext);
+
     const navigationLinks = () => {
       return (
         [...routeMap.values()].map(route => 

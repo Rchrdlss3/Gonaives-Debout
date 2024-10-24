@@ -3,7 +3,7 @@ import NavigationComponent from '../components/CommonComponents/NavigationCompon
 import AccomplishmentCard from '../components/AccomplishmentsComponents/AccomplishmentCard';
 import { FILLER_TEXT } from '../helper/commonhelper';
 
-export default function AccomplishmentsPage({theme,setTheme}) {
+export default function AccomplishmentsPage() {
   let accomplishments = [];
 
   for (let i = 0; i < 10; i++) {

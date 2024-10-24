@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavigationComponent from '../components/CommonComponents/NavigationComponent';
 import HistoryComponent from '../components/HistoryComponents.js/HistoryComponent';
+import { ThemeContext } from '../App';
 
-function HistoryPage({theme,setTheme}) {
+function HistoryPage() {
+  const [theme,setTheme] = useContext(ThemeContext)
   return (
     <div>
       <h1 style = {{

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavigationComponent from '../components/CommonComponents/NavigationComponent';
 import FundRaisingComponent from '../components/FundRaisingComponents/FundRaisingComponent';
+import { ThemeContext } from '../App';
 
-export default function FundRaisingPage({theme,setTheme}) {
+export default function FundRaisingPage() {
+  const [theme,setTheme] = useContext(ThemeContext)
   return (
     <div>
       <h1 style = {{

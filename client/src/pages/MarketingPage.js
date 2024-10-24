@@ -1,12 +1,13 @@
 import React from 'react'
 import NavigationComponent from '../components/CommonComponents/NavigationComponent';
+import { mainStyle } from '../helper/styles';
 
-export default function AwardsPage({theme,setTheme}) {
+export default function MarketingPage() {
   return (
     <div>
       <h1 style = {{
         fontSize: '5em'
-      }}>Page for Awards</h1>
+      }}>Page for Marketing</h1>
     </div>
   )
 }
